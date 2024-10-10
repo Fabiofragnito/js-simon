@@ -29,3 +29,23 @@
         console.log(numbers);
     }
     generateRandomNumber()
+
+
+    /* parte un timer di 30s */
+
+    // con setTimeout
+
+    function ShowInputs() {
+
+        /* creo 5 input */
+        for (let i = 0; i < 5; i++) {
+            const input = document.createElement('input')
+            input.type = 'number';
+            input.placeholder = "inserire un numero";
+            numberContainer.appendChild(input); /* inserito input nel container */
+            
+        } 
+    }
+    
+    setTimeout(ShowInputs, 30000)
+    /* invoco funzine e imposto 30s di attesa */
