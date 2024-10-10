@@ -62,5 +62,15 @@
         const userInput = document.querySelectorAll('input') /* seleziono gli imput */
         let correctNumbers = [] /* creo un array vuoto x raccogliere i numeri dello user */
         let correctCounter = 0; /* contatore x i numeri corretti */
+        
+        for (let i = 0; i < userInput.length; i++) {
+            const userNumber =Number(userInput[i].value)
 
+            if (numbers.includes(userNumber) && userNumber > 0){
+    
+                correctNumbers.push(userNumber)
+            } 
+        }
+        const message = `hai indovinato ${correctCounter} ${correctNumbers.join(' ')}`
+        alert(message)
     }
