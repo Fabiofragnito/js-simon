@@ -15,9 +15,9 @@
     // const p = document.createElement('p') /* creo un elemeto p */
     // numberContainer.appendChild(p); /* aggiungo il p al div */
 
-
+    let numbers = [];
     function generateRandomNumber() {
-        let numbers = [];
+        
         for (let i = 0; i < 5; i++) { /* faccio un ciclo per iterare 5 numeri e li pusho nella array nembers */
             numbers.push(Math.floor(Math.random()*100)+1);        
         }
@@ -44,10 +44,23 @@
             const input = document.createElement('input')
             input.type = 'number';
             input.placeholder = "inserire un numero";
-            numberContainer.appendChild(input); /* inserito input nel container */
-            
+            numberContainer.appendChild(input); /* inserito input nel container */   
         } 
+         /* creo un bottone x verificare i numeri inseriti */
+         const button = document.createElement('button');
+         button.textContent = "verifica numeri";
+         button.onclick = verifyNumbers; 
+         numberContainer.appendChild(button)/* associo la funziona di verifica numeri al click sul button    */
+       
     }
 
     setTimeout(ShowInputs, 30000)
     /* invoco funzine e imposto 30s di attesa */
+
+    function verifyNumbers(){
+        
+        const userInput = document.querySelectorAll('input') /* seleziono gli imput */
+        let correctNumbers = [] /* creo un array vuoto x raccogliere i numeri dello user */
+        let correctCounter = 0; /* contatore x i numeri corretti */
+
+    }
