@@ -36,6 +36,8 @@
     // con setTimeout
 
     function ShowInputs() {
+        const numberContainer = document.getElementById('randomNumbers')/* recupero un container x gli input */
+        numberContainer.innerHTML = '' /* pulisco dai numeri messi in precedenza */
 
         /* creo 5 input */
         for (let i = 0; i < 5; i++) {
@@ -46,6 +48,6 @@
             
         } 
     }
-    
+
     setTimeout(ShowInputs, 30000)
     /* invoco funzine e imposto 30s di attesa */
